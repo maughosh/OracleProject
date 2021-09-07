@@ -1,0 +1,27 @@
+.main{
+    height:500px;
+    width: 300px;
+    border: solid black;
+}
+
+
+.tool{
+   background-color:rgba(52,71,76,255);
+}
+.tool-heading{
+    border:1px solid black;
+    border-radius: 5px;
+    background-color: rgba(65,114,126,255);
+    padding: 3%;
+    color: white;  
+}
+.create{
+    font-weight: bold;
+}
+
+.middle{
+    width: auto;
+    color: white;
+    background-color: black;
+    padding: 3%;
+}

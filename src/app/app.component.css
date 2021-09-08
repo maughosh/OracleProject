@@ -1,7 +1,10 @@
 .main{
-    height:500px;
+    height:auto;
     width: 300px;
     border: solid black;
+    position: relative;
+    top:10%;
+    left:40%;
 }
 
 
@@ -21,7 +24,69 @@
 
 .middle{
     width: auto;
+    overflow-x: auto;
+
     color: white;
-    background-color: black;
+    background-color: rgba(50,48, 46, 255);
     padding: 3%;
 }
+.identi_Icon{
+    float: right;
+    color: rgba(230,172,88,255);
+}
+hr{
+    border: 1px solid #5f442c;
+   }
+.pending{
+    color: rgba(206, 181, 115, 255);
+}
+.formBody{
+    padding: 3%;
+    background-color: rgba(63, 58, 54, 255);
+    
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    
+    
+  }
+  
+.example-full-width {
+    width: 100%;
+    padding-top: 10%;
+    color: white;
+  }
+ 
+ .firstLetter{
+    font-weight: bold;
+    color: white;
+  }
+  ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: rgba(133,133, 133,133) !important;
+  } 
+  ::ng-deep .mat-focused .mat-form-field-underline {
+    /*change color of underline after focus*/
+    background-color: blue !important;
+  } 
+  ::ng-deep .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+   }
+   ::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label after focus*/
+    color: rgba(206, 181, 115, 255) !important;
+   }
+   
+   mat-icon{
+       color: rgba(133,133, 133,133);
+   }
+   .hint{
+    color: rgba(133,133, 133,133);
+   }
+   .validation{
+       color: green;
+      
+   }

@@ -1,11 +1,70 @@
 <div class="main">
   <mat-toolbar class="tool">
     <div class="tool-heading">
-      <span class="create">Creating</span> Financial Calender 
+      <span class="create">Creating</span> Financial Calender
     </div>
   </mat-toolbar>
 
   <div class="middle">
-    Add Identification
+    <span>Add Identification</span>
+    <!-- <mat-icon class="identi_Icon" *ngIf="userForm.get('fname').valid">check_circle</mat-icon> -->
+    <span *ngIf="(userForm.get('fname').invalid || userForm.get('lname').invalid || userForm.get('des').invalid || userForm.get('des').untouched ||userForm.get('lname').untouched ||userForm.get('fname').untouched )">
+      <mat-icon class="identi_Icon">check_circle</mat-icon>
+    </span>
+
+    <span  *ngIf="userForm.get('fname').valid && userForm.get('lname').valid && userForm.get('des').valid && userForm.get('des').valid && userForm.get('des').touched && userForm.get('lname').touched && userForm.get('fname').touched ">
+      <mat-icon  class="identi_Icon" [ngStyle]="{color:'green'}">check_circle</mat-icon>
+    </span>
+    <hr>
+    <span> For: Financial Calender</span>
+    <div class="pending" *ngIf="userForm.get('fname').invalid || userForm.get('fname').untouched">Pending...</div>
+    <div  class="pending" *ngIf="userForm.get('fname').valid && userForm.get('fname').touched">{{userForm.get('fname').value}}</div>
   </div>
+  <div class="formBody">
+    <form class="example-form" [formGroup]="userForm">
+
+      <mat-form-field class="example-full-width">
+        <!-- logic for input field -->
+        <input type="text" matInput placeholder="Name" id="fname" formControlName="fname" #ftemplate>
+
+        <!-- validation for icon -->
+        <span matSuffix *ngIf="userForm.get('fname').invalid || userForm.get('fname').untouched">
+          <mat-icon>check_circle</mat-icon>
+        </span>
+
+        <span matSuffix *ngIf="userForm.get('fname').valid && userForm.get('fname').touched">
+          <mat-icon [ngStyle]="{color:'green'}">check_circle</mat-icon>
+        </span>
+
+        <!-- logic for hint -->
+        <mat-hint align="end" class="hint"><span class="firstLetter">{{ftemplate.value.length}}</span>/30</mat-hint>
+        <div></div>
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width">
+        <!-- logic for input field -->
+        <input type="text" matInput placeholder="Long Name" id="lname" formControlName="lname" #ltemplate>
+
+        <!-- validation for icon -->
+        <span matSuffix *ngIf="userForm.get('lname').invalid || userForm.get('lname').untouched">
+          <mat-icon>check_circle</mat-icon>
+        </span>
+        <span matSuffix *ngIf="userForm.get('lname').valid && userForm.get('lname').touched">
+          <mat-icon [ngStyle]="{color:'green'}">check_circle</mat-icon>
+        </span>
+
+        <!-- logic for hint -->
+        <mat-hint align="end" class="hint"><span class="firstLetter">{{ltemplate.value.length}}</span>/255</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <!-- logic for input field -->
+        <textarea matInput placeholder="Description" id="des" formControlName="des" #destemplate></textarea>
+
+        <mat-hint align="end" class="hint"><span class="firstLetter">{{destemplate.value.length}}</span>/4000</mat-hint>
+      </mat-form-field>
+    </form>
+  </div>
+
 </div>

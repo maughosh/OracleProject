@@ -18,14 +18,14 @@
     <hr>
     <span> For: Financial Calender</span>
     <div class="pending" *ngIf="userForm.get('fname').invalid || userForm.get('fname').untouched">Pending...</div>
-    <div  class="pending" *ngIf="userForm.get('fname').valid && userForm.get('fname').touched">{{userForm.get('fname').value}}</div>
+    <div  class="pending" *ngIf="userForm.get('fname').valid && userForm.get('fname').touched">{{upadteFname}}</div>
   </div>
   <div class="formBody">
     <form class="example-form" [formGroup]="userForm">
 
       <mat-form-field class="example-full-width">
         <!-- logic for input field -->
-        <input type="text" matInput placeholder="Name" id="fname" formControlName="fname" #ftemplate>
+        <input type="text" matInput placeholder="Name" id="fname" formControlName="fname" (change)="onChange($event)" #ftemplate>
 
         <!-- validation for icon -->
         <span matSuffix *ngIf="userForm.get('fname').invalid || userForm.get('fname').untouched">

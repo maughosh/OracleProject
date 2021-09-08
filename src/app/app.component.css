@@ -1,10 +1,8 @@
 .main{
-    height:auto;
-    width: 300px;
-    border: solid black;
-    position: relative;
-    top:10%;
-    left:40%;
+    height:100%;
+    width: auto;
+    
+    
 }
 
 
@@ -14,9 +12,11 @@
 .tool-heading{
     border:1px solid black;
     border-radius: 5px;
-    background-color: rgba(65,114,126,255);
-    padding: 3%;
-    color: white;  
+    background-color: rgba(65,114,126,255); 
+    padding: 5px;
+    color: white;
+    width: 100%;
+    text-align: center;
 }
 .create{
     font-weight: bold;
@@ -28,7 +28,7 @@
 
     color: white;
     background-color: rgba(50,48, 46, 255);
-    padding: 3%;
+    padding: 2%;
 }
 .identi_Icon{
     float: right;
@@ -43,11 +43,10 @@ hr{
 .formBody{
     padding: 3%;
     background-color: rgba(63, 58, 54, 255);
-    
+    height:100%
 }
 .example-form {
-    min-width: 150px;
-    max-width: 500px;
+   
     width: 100%;
     
     
@@ -55,7 +54,7 @@ hr{
   
 .example-full-width {
     width: 100%;
-    padding-top: 10%;
+    padding-top: 2%;
     color: white;
   }
  

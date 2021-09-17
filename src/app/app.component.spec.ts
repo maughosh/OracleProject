@@ -108,7 +108,6 @@ describe("AppComponent", () => {
     expect(component.userForm.valid).toBeTruthy();
   });
 
-  //unit test case for ngoninit
   it("makes call to onChange", () => {
     const data = { target: { value: "value" } };
     const data1 = { target: { value1: 'undefined' } };

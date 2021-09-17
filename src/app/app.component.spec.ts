@@ -108,6 +108,7 @@ describe("AppComponent", () => {
     expect(component.userForm.valid).toBeTruthy();
   });
 
+  //unit test cases for onchanges
   it("makes call to onChange", () => {
     const data = { target: { value: "value" } };
     const data1 = { target: { value1: 'undefined' } };

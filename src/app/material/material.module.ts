@@ -5,14 +5,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 
 
-const MaterialComponet=[MatButtonModule,
+const MaterialComponet = [MatButtonModule,
     MatToolbarModule,
     MatInputModule,
     MatIconModule];
 
 @NgModule({
     imports: [MaterialComponet],
-    exports:[MaterialComponet]
+    exports: [MaterialComponet]
 })
 export class MaterialModule { }
 
